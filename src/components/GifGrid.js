@@ -9,7 +9,7 @@ const GifGrid = ({ category }) => {
       {loading && <p className="card animate__animated animate__flash">Loading</p>}
       <div className="card-grid">
         {images.map((img) => {
-          return <GifGridItem img={img} key={img.id} />;
+          return <GifGridItem {...img} key={img.id} />;
         })}
       </div>
     </>

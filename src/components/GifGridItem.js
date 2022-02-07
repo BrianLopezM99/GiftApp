@@ -1,11 +1,18 @@
-const GifGridItem = ({img}) => {
+import PropTypes from 'prop-types';
+
+const GifGridItem = ({title, url}) => {
 
     return (
         <div className="card animate__animated animate__fadeIn">
-            <img src={img.url} alt={img.title}/>
-            <p>{img.title}</p>
+            <img src={url} alt={title}/>
+            <p>{title}</p>
         </div>
     )
 }
 
-export default GifGridItem
+export default GifGridItem;
+
+GifGridItem.propTypes = {
+    title: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired
+}
